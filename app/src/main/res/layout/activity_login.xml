@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".LoginActivity">
+
+    <TextView
+        android:id="@+id/welcome_to"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="96dp"
+        android:text="@string/welcome_to"
+        android:textAppearance="@style/welcome_to"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/furniture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="7dp"
+        android:layout_marginRight="7dp"
+        android:text="@string/furniture"
+        android:textAppearance="@style/furniture"
+        app:layout_constraintEnd_toEndOf="@+id/welcome_to"
+        app:layout_constraintTop_toBottomOf="@+id/welcome_to" />
+
+    <EditText
+        android:id="@+id/editTextTextEmailAddress"
+        android:layout_width="341dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="72dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="2dp"
+        android:background="@drawable/boder_edittext"
+        android:drawableLeft="@drawable/ic_account_box_white_24dp"
+        android:drawablePadding="4dp"
+        android:hint="Usename"
+        android:inputType="textEmailAddress"
+        android:padding="18dp"
+        android:textColorHint="@android:color/holo_blue_light"
+        app:layout_constraintBottom_toTopOf="@+id/editTextTextPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <EditText
+        android:id="@+id/editTextTextPassword"
+        android:layout_width="341dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="50dp"
+        android:background="@drawable/boder_edittext"
+        android:drawableLeft="@drawable/ic_vpn_key_white_24dp"
+        android:drawablePadding="4dp"
+        android:hint="Password"
+        android:inputType="numberPassword"
+        android:padding="18dp"
+        android:textColorHint="@android:color/holo_blue_light"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress" />
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginRight="35dp"
+        android:backgroundTint="#E23C3C"
+        android:padding="18dp"
+        android:text="LOGIN"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="341dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="@id/btnLogin"
+        app:layout_constraintTop_toBottomOf="@+id/btnLogin">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="4dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:background="#FFFFFF"
+                android:src="@drawable/facebook" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_gravity="bottom"
+                android:backgroundTint="#3A559F"
+                android:text="Facebook"
+                android:textColor="#FFFFFF" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:background="#FFFFFF"
+                android:src="@drawable/google" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="bottom"
+                android:backgroundTint="#cf4333"
+                android:text="Google"
+                android:textColor="#FFFFFF" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnRegister"
+        android:layout_width="341dp"
+        android:layout_height="73dp"
+        android:text="REGISTER NOW"
+        android:backgroundTint="#E23C3C"
+        android:textColor="#FFFFFF"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="45dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginRight="35dp"
+        app:layout_constraintStart_toStartOf="@id/linearLayout3"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3" />
+    />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
